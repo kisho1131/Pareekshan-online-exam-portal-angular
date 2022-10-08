@@ -42,9 +42,13 @@ export class RegisterComponent implements OnInit {
         }, 2000);
       },
       (error) => {
-        this.matSnackBar.open('Something went wrong, Please Try Again !!', '', {
-          duration: 3000,
-        });
+        this.matSnackBar.open(
+          'User with username already exist.Please Try again!!',
+          '',
+          {
+            duration: 3000,
+          }
+        );
       }
     );
   }
