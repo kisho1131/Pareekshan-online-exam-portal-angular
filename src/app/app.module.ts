@@ -10,11 +10,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {MatInputModule} from '@angular/material/input';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HomeComponent } from './pages/home/home.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { authInterceptorProvider } from './interceptor/auth.interceptor';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
+import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import {MatIconModule} from '@angular/material/icon';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
+    UserDashboardComponent,
+    AdminDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,9 +39,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     MatSnackBarModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [authInterceptorProvider],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
