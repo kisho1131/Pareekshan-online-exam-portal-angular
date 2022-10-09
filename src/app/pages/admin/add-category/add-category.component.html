@@ -1,0 +1,19 @@
+<div><h3>Add New Category</h3></div>
+<br/>
+<div class="row">
+    <div class="col-md-8">
+        <form (ngSubmit)="addCategory()">
+            <div class="form-outline mb-4">
+                <input required [(ngModel)]="category.title" name="title" type="text" id="title" class="form-control" />
+                <label class="form-label" for="title">Enter Title</label>
+            </div>
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+                <textarea required [(ngModel)]="category.description" name="description" class="form-control" id="description" rows="4"></textarea>
+                <label class="form-label" for="description">Enter Description</label>
+            </div>
+            <!-- Submit button -->
+            <button  type="submit" class="btn btn-primary btn-block mb-4">Save Category</button>
+        </form>
+    </div>
+</div>

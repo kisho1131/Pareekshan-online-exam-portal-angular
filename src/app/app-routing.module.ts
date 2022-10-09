@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminGuard } from './guard/admin.guard';
 import { UserGuard } from './guard/user.guard';
+import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
+import { ListCategoryComponent } from './pages/admin/list-category/list-category.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -27,6 +29,8 @@ const routes: Routes = [
     children: [
       { path: 'profile', component: ProfileComponent },
       { path: '', component: WelcomeComponent },
+      { path: 'list-category', component: ListCategoryComponent },
+      { path: 'add-category', component: AddCategoryComponent },
     ],
   },
 ];

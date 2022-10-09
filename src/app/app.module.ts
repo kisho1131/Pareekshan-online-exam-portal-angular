@@ -23,6 +23,8 @@ import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import { ListCategoryComponent } from './pages/admin/list-category/list-category.component';
+import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
     ProfileComponent,
     SidebarComponent,
     WelcomeComponent,
+    ListCategoryComponent,
+    AddCategoryComponent,
   ],
   imports: [
     BrowserModule,

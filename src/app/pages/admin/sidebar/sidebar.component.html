@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="sidebar">
     <mat-action-list>
         <div mat-subheader><mat-icon>menu</mat-icon><strong>Menu</strong></div>
         <button mat-list-item routerLink="/admin-dashboard"><mat-icon>home</mat-icon>
@@ -9,9 +9,9 @@
             Quizes</button>
         <button mat-list-item><mat-icon>playlist_add</mat-icon>
             New Quiz</button>
-        <button mat-list-item ><mat-icon>category</mat-icon>
+        <button mat-list-item routerLink="/admin-dashboard/list-category"><mat-icon>category</mat-icon>
             Categories</button>
-        <button mat-list-item><mat-icon>add_task</mat-icon>
+        <button mat-list-item routerLink="/admin-dashboard/add-category"><mat-icon>add_task</mat-icon>
              New Category</button>
     </mat-action-list>
 </mat-card>
